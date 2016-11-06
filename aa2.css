@@ -1,0 +1,11 @@
+body
+{
+background-color:"#ffffcc";
+
+
+}
+
+
+a:link{color:blue}
+a:visited{color:green}
+a:active{color:cyan}

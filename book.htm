@@ -1,0 +1,211 @@
+<HTML><HEAD><TITLE>Booking Form</TITLE>
+
+<script language=JavaScript>
+
+function check()
+{
+
+	if (document.j.name.value == "")
+	
+	{
+		alert("Please enter Name");
+		document.j.name.focus()
+		return false;
+	}
+
+	if (document.j.address.value == "")
+	
+	{
+		alert("Please enter Address");	
+		document.j.address.focus()
+		return false;
+	}
+
+	if((isNaN(document.j.telephone.value)==true)||(document.j.telephone.value == ""))
+	
+	{
+		alert("Please enter Telephone Number");
+		document.j.telephone.focus()
+		return false;
+	}
+
+	if((isNaN(document.j.fax.value)==true)||(document.j.fax.value == ""))
+	{
+		alert("Please enter Fax number");
+		document.j.fax.focus()
+		return false;
+	}
+
+	if((document.j.email.value.indexOf("@")==-1)||(document.j.email.value==""))
+	{
+		alert("Please enter Email address");
+		document.j.email.focus()
+		return false;
+	}
+	
+
+ 	if(document.j.hotelchosen.selectedIndex==false)
+	
+	{
+		alert("Please select a hotel");
+		return false;
+	}
+
+ 	if((isNaN(document.j.ad.value)==true)||(document.j.ad.value == ""))
+	{
+	
+		alert("Please enter the date of your Arrival");
+		document.j.ad.focus()
+		return false;
+	}
+
+
+
+	if((isNaN(document.j.am.value)==true)||(document.j.am.value == ""))
+	{
+	
+		alert("Please enter the month of your Arrival");
+		document.j.am.focus()
+		return false;
+	}
+
+	if((isNaN(document.j.ay.value)==true)||(document.j.ay.value == ""))
+	{
+	
+		alert("Please enter the year of your Arrival");
+		document.j.ay.focus()
+		return false;
+	}
+
+ 	if((isNaN(document.j.dd.value)==true)||(document.j.dd.value == ""))
+	{
+	
+		alert("Please enter the date of your Departure");
+		document.j.dd.focus()
+		return false;
+	}
+
+
+
+	if((isNaN(document.j.dm.value)==true)||(document.j.dm.value == ""))
+	{
+	
+		alert("Please enter the month of your Departure");
+		document.j.dm.focus()
+		return false;
+	}
+
+	if((isNaN(document.j.dy.value)==true)||(document.j.dy.value == ""))
+	{
+	
+		alert("Please enter the year of your Departure");
+		document.j.dy.focus()
+		return false;
+	}
+
+
+ 	if((isNaN(document.j.adults.value)==true)||(document.j.adults.value == ""))
+
+	{
+
+		alert("Please enter Number of Adults");
+		document.j.adults.focus();
+		return false;
+	}
+
+
+	if((isNaN(document.j.children.value)==true)||(document.j.children.value == ""))
+
+	{
+		alert("Please enter Number of Children");
+		document.j.children.focus()
+		return false;
+	}
+
+	if(document.j.roomtype.selectedIndex==false)
+	
+	{
+		alert("Please select a Room Type");
+		return false;
+	}
+	
+	}
+
+
+		</script>
+</head>
+<BODY bgcolor="#ffffcc">
+
+<form name="j" onSubmit="return check(this)" method=post >
+
+<center><font color="#FF0000" size="12"><i>Hotels Accommodation</i></font><center><img src="images/image7.jpg"width="100" height="80"></center>
+
+<br><font size="2" face="Arial" color="green"><b><center>Please complete the form below and send it to us.</center><br> 
+
+<b>Please fill in the following the details below:</b><BR><br></font>
+
+<table align=center><font color=green>
+Mr<input type="radio" value="Mr" name="title">
+Mrs<input type="radio" value="Mrs" name="title">
+Ms<input type="radio" value="Ms" name="title"></center>
+
+<tr valign=top><td><font color=green>Name :<td><input size=40 maxlength=40 name="name">
+
+<tr valign=top><td><font color=green>Address :<td><textarea rows=4 cols=40 name="address"></textarea>
+
+<tr valign=top><td><font color=green>Telephone No. :<td><input size=40 maxlength=40 name="telephone">
+
+<tr valign=top><td><font color=green>Fax No. :<td><input size=40 maxlength=40 name="fax">
+
+<tr valign=top><td><font color=green>Email address :<td><input size=40 maxlength=40 name="email">
+<tr align=top> 
+                                                                                                                                                         
+<td><font color=green>Hotel Chosen :<td><select name="hotelchosen">
+<option value="HOTEL">HOTEL
+
+<option>Dhalia Resort
+<option>Ozone
+<option>Renaissance
+<option>Pureple
+<option>Starlight
+
+</select>
+
+<tr valign=top><td><font color=green><td>
+
+
+
+<tr valign=top><td><font color=green>Arrival Date (DD/MM/YYYY) :<td><input size=4 maxlength=2 name="ad"> <input size=4 maxlength=2 name="am"> <input size=5 maxlength=4 name="ay">
+
+<tr valign=top><td><font color=green>Departure Date (DD/MM/YYYY) :<td><input size=4 maxlength=2 name="dd"> <input size=4 maxlength=2 name="dm"> <input size=5 maxlength=4 name="dy">
+
+
+<tr valign=top><td><font color=green>Number of Adults :<td><input size=3 maxlength=3 name="adults">
+
+<tr valign=top><td><font color=green>Number of Children under age of 12: <BR><td>
+
+<input size=3 maxlength=3 name="children"><tr valign=top>
+
+
+<td><font color=green>Room Type Required :<td><select name="roomtype"><option value="Type">Type
+
+<option>Single<option>Double<option>Suite</select><tr valign=top>
+
+<tr valign=top><td><font color=green>Number of Rooms:<td><input size=3 maxlength=3 name="numroom">
+<tr align=top>
+
+<tr valign=top><td><font color=green>Comments :<td><textarea rows=4 cols=40 name="comments"></textarea>
+
+</table>
+
+<tr valign=top><a href="contact.htm">Contact Us</a></tr><center>
+
+<table><tr><td><BR><INPUT TYPE="Submit" VALUE="Submit">
+
+<td><BR> <INPUT TYPE="reset" VALUE="Clear Form"><br></tr>
+
+</font></table></center></FORM>
+
+
+</html>
+
